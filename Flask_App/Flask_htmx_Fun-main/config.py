@@ -3,5 +3,5 @@ DEBUG = True
 
 # Secret key for session management. You can generate random strings here:
 # https://randomkeygen.com/
-SECRET_KEY = 'my secret'
+SECRET_KEY = ')keOIhMH,Qm/eAS'
 
