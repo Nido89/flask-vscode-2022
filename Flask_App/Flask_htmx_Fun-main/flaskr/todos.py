@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, current_app as app
 
 bp = Blueprint('todos', __name__, url_prefix='/todos')
-
+todos = [{'id': 1, 'name': "Sample Task"}]
 
 
 @bp.route("/", methods=["GET"])
@@ -11,10 +11,13 @@ def get_todos():
 @bp.route("/add", methods=["POST"])
 def add_todo():
     todo_name = request.form.get("todo")
-    todos = [{'id': 1, 'name': todo_name}]
+    
+    
     id = len(todos)+1
+    
 
     todos.append({'id': id, 'name': todo_name})
+    
 
     return render_template("bp/todos/todos.html", todos=todos)
 
